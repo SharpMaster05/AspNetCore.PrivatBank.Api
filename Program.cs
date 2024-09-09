@@ -1,6 +1,9 @@
+using PrivatBank.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+builder.Services.AddHttpClient<CurrencyService>();
 
 var app = builder.Build();
 

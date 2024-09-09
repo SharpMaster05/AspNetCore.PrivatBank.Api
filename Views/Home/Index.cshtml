@@ -1,1 +1,26 @@
-<h1>hello wolrd</h1>
+@using PrivatBank.Models
+
+@model List<CurrencyRate>;
+
+<h1>Курсы валют</h1>
+<table class="table">
+    <thead class=' table table-bordered'>
+        <tr>
+			<th>Валюта</th>
+			<th>Базовая валюта</th>
+			<th>Курс покупки</th>
+			<th>Курс продажи</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var rate in Model)
+        {
+			<tr>
+				<td>@rate.Ccy</td>
+				<td>@rate.BaseCcy</td>
+				<td>@rate.Buy</td>
+				<td>@rate.Sale</td>
+			</tr>
+        }
+    </tbody>
+</table>

@@ -1,11 +1,21 @@
 using Microsoft.AspNetCore.Mvc;
+using PrivatBank.Services;
 
 namespace PrivatBank.Controllers;
 
 public class HomeController : Controller
 {
-    public IActionResult Index()
+    private readonly CurrencyService _service;
+
+    public HomeController(CurrencyService service)
     {
-        return View();
+        _service = service;
+    }
+
+    public async Task<IActionResult> Index()
+    {
+        var rates = await _service.GetAsync();
+
+        return View(rates);
     }
 }
