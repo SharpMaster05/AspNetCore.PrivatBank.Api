@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "pNeyPekEdsE=",
+  "dgSpecHash": "3Qbglo73y44=",
   "success": true,
   "projectFilePath": "C:\\Users\\mrkol\\Desktop\\aspnet\\PrivatBank\\PrivatBank.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\mrkol\\.nuget\\packages\\bootstrap\\5.3.3\\bootstrap.5.3.3.nupkg.sha512"
+  ],
   "logs": []
 }
